@@ -2,6 +2,8 @@
  * Created by henrik on 24/08/14.
  */
 
+
+
 var emptyFn = function () {};
 var emptyStringFn  = function () {
   return '';
@@ -15,6 +17,7 @@ SimpleSchema = function () {
   extendOptions = emptyFn;
   _makeGeneric = emptyFn;
   addValidator = emptyFn;
+  _globalMessages: {};
   messages = emptyFn;
   messageForError = emptyFn;
   RegEx = {}
@@ -33,3 +36,15 @@ SimpleSchema.prototype = {
   allowsKey: emptyFn
 };
 
+SimpleSchema.RegEx = {
+  Email: null,
+  Domain: null,
+  WeakDomain: null,
+  IP: null,
+  IPv4: null,
+  IPv6: null,
+  Url: null,
+  Id: null
+};
+
+SimpleSchema.messages = emptyFn;
